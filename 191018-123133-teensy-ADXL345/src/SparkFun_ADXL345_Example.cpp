@@ -18,13 +18,16 @@
  *  SparkFun ADXL345
  *  Arduino Uno
  *  *********************************************/
-#include "Arduino.h"
+ //https://github.com/sparkfun/SparkFun_ADXL345_Arduino_Library
+
+//WORKS!!
+
 #include <SparkFun_ADXL345.h>         // SparkFun ADXL345 Library
 
 /*********** COMMUNICATION SELECTION ***********/
 /*    Comment Out The One You Are Not Using    */
-ADXL345 adxl = ADXL345(10);           // USE FOR SPI COMMUNICATION, ADXL345(CS_PIN);
-//ADXL345 adxl = ADXL345();             // USE FOR I2C COMMUNICATION
+//ADXL345 adxl = ADXL345(10);           // USE FOR SPI COMMUNICATION, ADXL345(CS_PIN);
+ADXL345 adxl = ADXL345();             // USE FOR I2C COMMUNICATION
 
 /****************** INTERRUPT ******************/
 /*      Uncomment If Attaching Interrupt       */
@@ -75,11 +78,11 @@ void setup(){
                                                         // This library may have a problem using INT2 pin. Default to INT1 pin.
 
   // Turn on Interrupts for each mode (1 == ON, 0 == OFF)
-  adxl.InactivityINT(1);
-  adxl.ActivityINT(1);
-  adxl.FreeFallINT(1);
-  adxl.doubleTapINT(1);
-  adxl.singleTapINT(1);
+  adxl.InactivityINT(0);
+  adxl.ActivityINT(0);
+  adxl.FreeFallINT(0);
+  adxl.doubleTapINT(0);
+  adxl.singleTapINT(0);
 
 //attachInterrupt(digitalPinToInterrupt(interruptPin), ADXL_ISR, RISING);   // Attach Interrupt
 
@@ -96,16 +99,17 @@ void loop(){
   // Output Results to Serial
   /* UNCOMMENT TO VIEW X Y Z ACCELEROMETER VALUES */
   Serial.print(x);
-  //Serial.print(", ");
-  //Serial.print(y);
-  //Serial.print(", ");
-  //Serial.println(z);
+  Serial.print(", ");
+  Serial.print(y);
+  Serial.print(", ");
+  Serial.print(z);
 
   //ADXL_ISR();
   // You may also choose to avoid using interrupts and simply run the functions within ADXL_ISR();
   //  and place it within the loop instead.
   // This may come in handy when it doesn't matter when the action occurs.
-
+  Serial.println();
+  delay(20);
 }
 
 /********************* ISR *********************/

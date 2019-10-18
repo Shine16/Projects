@@ -1,10 +1,9 @@
--IC:/Users/Shi En/Documents/PlatformIO/Projects/191018-123133-teensy-ADXL345/include
--IC:/Users/Shi En/Documents/PlatformIO/Projects/191018-123133-teensy-ADXL345/src
--IC:/Users/Shi En/Documents/PlatformIO/Projects/191018-123133-teensy-ADXL345/lib/ADXL345/src
+-IC:/Users/Shi En/Documents/PlatformIO/Projects/191018-123133-teensy-ITG3200/include
+-IC:/Users/Shi En/Documents/PlatformIO/Projects/191018-123133-teensy-ITG3200/src
 -IC:/Users/Shi En/.platformio/packages/framework-arduinoteensy/libraries/Wire
 -IC:/Users/Shi En/.platformio/packages/framework-arduinoteensy/libraries/Wire/utility
--IC:/Users/Shi En/.platformio/packages/framework-arduinoteensy/libraries/SPI
 -IC:/Users/Shi En/.platformio/packages/framework-arduinoteensy/cores/teensy3
+-IC:/Users/Shi En/Documents/PlatformIO/Projects/191018-123133-teensy-ITG3200/lib/ADXL345/src
 -IC:/Users/Shi En/.platformio/packages/framework-arduinoteensy/libraries/ADC
 -IC:/Users/Shi En/.platformio/packages/framework-arduinoteensy/libraries/AccelStepper/src
 -IC:/Users/Shi En/.platformio/packages/framework-arduinoteensy/libraries/Adafruit_CC3000
@@ -69,6 +68,7 @@
 -IC:/Users/Shi En/.platformio/packages/framework-arduinoteensy/libraries/ResponsiveAnalogRead/src
 -IC:/Users/Shi En/.platformio/packages/framework-arduinoteensy/libraries/SD
 -IC:/Users/Shi En/.platformio/packages/framework-arduinoteensy/libraries/SD/utility
+-IC:/Users/Shi En/.platformio/packages/framework-arduinoteensy/libraries/SPI
 -IC:/Users/Shi En/.platformio/packages/framework-arduinoteensy/libraries/SPIFlash
 -IC:/Users/Shi En/.platformio/packages/framework-arduinoteensy/libraries/ST7565
 -IC:/Users/Shi En/.platformio/packages/framework-arduinoteensy/libraries/ST7735_t3
