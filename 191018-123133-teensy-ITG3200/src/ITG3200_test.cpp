@@ -3,7 +3,8 @@
 // http://code.google.com/p/itg-3200driver
 // Simple test of gyro sensors output using default settings.
 
-#include <Wire.h>
+//#include <Wire.h>
+#include <i2c_t3.h>
 #include <ITG3200.h>
 
 ITG3200 gyro = ITG3200();
@@ -20,7 +21,7 @@ void setup(void) {
   gyro.init(ITG3200_ADDR_AD0_LOW);
 
   Serial.print("zeroCalibrating...");
-  gyro.zeroCalibrate(2500, 2);
+  //gyro.zeroCalibrate(2500, 2);
   Serial.println("done.");
 }
 
