@@ -7,6 +7,7 @@
 #include <Wire.h>
 
 GY_85 GY85;     //create the object
+int accel[3];
 
 void setup()
 {
@@ -21,6 +22,9 @@ void setup()
 
 void loop()
 {
+
+
+
     int ax = GY85.accelerometer_x( GY85.readFromAccelerometer() );
     int ay = GY85.accelerometer_y( GY85.readFromAccelerometer() );
     int az = GY85.accelerometer_z( GY85.readFromAccelerometer() );
@@ -34,19 +38,14 @@ void loop()
     float gz = GY85.gyro_z( GY85.readGyro() );
     float gt = GY85.temp  ( GY85.readGyro() );
 
-    Serial.print  ( "accelerometer" );
-    Serial.print  ( " x:" );
-    Serial.print  ( ax );
-    Serial.print  ( " y:" );
-    Serial.print  ( ay );
-    Serial.print  ( " z:" );
-    Serial.print  ( az );
-    Serial.println();
-    //Serial.print  ( "  compass" );Serial.print  ( " x:" );  Serial.print  ( cx );  Serial.print  ( " y:" );  Serial.print  ( cy );  Serial.print  (" z:");  Serial.print  ( cz );
+    Serial.print  ( "accelerometer" );  Serial.print  ( " x:" );  Serial.print  ( ax );  Serial.print  ( " y:" );Serial.print  ( ay );  Serial.print  ( " z:" );  Serial.print  ( az );  Serial.println();
 
+    Serial.print  ( "compass" );Serial.print  ( " x:" );  Serial.print  ( cx );  Serial.print  ( " y:" );  Serial.print  ( cy );  Serial.print  (" z:");  Serial.print  ( cz );
+     Serial.println();
 
-    //Serial.print  ( "  gyro" );  Serial.print  ( " x:" );  Serial.print  ( gx );  Serial.print  ( " y:" );  Serial.print  ( gy );  Serial.print  ( " z:" );  Serial.print  ( gz );
-    // Serial.print  ( " gyro temp:" );  Serial.println( gt );
+    Serial.print  ( "gyro" );  Serial.print  ( " x:" );  Serial.print  ( gx );  Serial.print  ( " y:" );  Serial.print  ( gy );  Serial.print  ( " z:" );  Serial.print  ( gz );
+     Serial.print  ( " gyro temp:" );  Serial.println( gt );
+Serial.println();
 
-    delay(20);             // only read every 0,5 seconds, 10ms for 100Hz, 20ms for 50Hz
+    delay(500);             // only read every 0,5 seconds, 10ms for 100Hz, 20ms for 50Hz
 }

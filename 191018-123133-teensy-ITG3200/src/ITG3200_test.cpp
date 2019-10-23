@@ -29,14 +29,14 @@ void loop(void) {
     while (gyro.isRawDataReady()) {
 
     // Reads uncalibrated raw values from the sensor
-    gyro.readGyroRaw(&ix,&iy,&iz);
+    /*gyro.readGyroRaw(&ix,&iy,&iz);
     Serial.print("X1:");
     Serial.print(ix);
     Serial.print("  Y:");
     Serial.print(iy);
     Serial.print("  Z:");
     Serial.println(iz);
-
+*/
 
     /*
     // Reads calibrated raw values from the sensor
@@ -50,14 +50,14 @@ void loop(void) {
     */
 
     // Reads calibrated values in deg/sec
-    /*gyro.readGyro(&x,&y,&z);
+    gyro.readGyro(&x,&y,&z);
     Serial.print("X3:");
     Serial.print(x);
     Serial.print("  Y:");
     Serial.print(y);
     Serial.print("  Z:");
     Serial.println(z);
-    */
+
     delay(20);
   }
 }
