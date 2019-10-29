@@ -6,13 +6,17 @@
 //            or another board which has PSRAM enabled
 //
 
-// Select camera model
-#define CAMERA_MODEL_WROVER_KIT
-//#define CAMERA_MODEL_M5STACK_PSRAM
-//#define CAMERA_MODEL_AI_THINKER
+//https://community.platformio.org/t/solved-esp32-serial-monitor-not-working/2858/7
 
-const char* ssid = "biqmind-users";
-const char* password = "\"WE ARE A STRONG TEAM OF RND\"";
+// Select camera model
+//#define CAMERA_MODEL_WROVER_KIT
+//#define CAMERA_MODEL_M5STACK_PSRAM
+#define CAMERA_MODEL_AI_THINKER
+
+const char* ssid = "qwert123";
+const char* password = "smarttable";
+//const char* ssid = "biqmind-users";
+//const char* password = "\"WE ARE A STRONG TEAM OF RND\"";
 
 
 #if defined(CAMERA_MODEL_WROVER_KIT)
